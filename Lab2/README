@@ -1,0 +1,4 @@
+Taking the recorded script, clean up by removing require rubygems and deleting the line that does a click on the total amount.
+
+Demonstrate executing this by running:
+$>  ruby SeleniumBuilderScriptMod.rb
