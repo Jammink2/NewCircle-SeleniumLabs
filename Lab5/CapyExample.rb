@@ -1,9 +1,13 @@
 require 'selenium-webdriver'
 require 'capybara'
 require 'capybara/dsl'
+require 'capybara/poltergeist'
 
-session = Capybara::Session.new(:selenium)
-session.visit('https://awesome-boutique-9152.spree.mx/')
+Capybara.javascript_driver = :poltergeist
+
+session = Capybara::Session.new(:poltergeist)
+session.visit('http://awesome-boutique-9152.spree.mx/')
+session.save_screenshot('homepage.png')
 session.find(:css, "div.container > nav.columns.seven > #main-nav-bar > #shop-link > a > span.translation_missing").click
 session.find(:css, "img[alt=\"Ruby on Rails Tote\"]").click
 
@@ -30,7 +34,6 @@ session.click_button('Update')
 session.find(:xpath, ".//*[@id='cart_adjustments']/tr/td[2]").has_text? ('$7.20')
 
 element = session.find(:id, "order_line_items_attributes_0_quantity")
-
 #  http://www.rubydoc.info/github/jnicklas/capybara/master/Capybara/Node/Element
 
 element.set('2')
@@ -38,3 +41,5 @@ element.set('2')
 # Validate value set
 
 element.value == '2'
+
+session.save_screenshot('final.png')

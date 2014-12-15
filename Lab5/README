@@ -1,0 +1,24 @@
+Converts the practice script from native selenium-webdriver to Capybara.
+
+Not much code has changed, but in some cases it is much esier to read.
+
+For example, in the original script to click on the search button the code looked like this:
+
+browser.find_element(:name, "button").click
+
+Now, it is more meaningful with the following:
+
+session.click_button('Search')
+
+
+Additionally, we learned how to use the .methods method to see what was available to use in Capybara.  Especially, when the evaluate javascript approach to update the quantity was easily replaced with the following code:
+
+element = session.find(:id, "order_line_items_attributes_0_quantity")
+element.set('2')
+element.value == '2'
+
+Finally, with capybara, it was easy to use a headless browser to perform the same test.
+
+https://github.com/teampoltergeist/poltergeist/tree/v1.5.1
+
+
