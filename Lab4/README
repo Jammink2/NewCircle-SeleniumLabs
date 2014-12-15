@@ -1,0 +1,1 @@
+In this lab, clean up the find_element selectors to be either a id, css or xpath.  Big focus is to remove the find_elements that use tag_name=html.
