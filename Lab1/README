@@ -1,0 +1,19 @@
+This is a description of the recorded script:
+
+1.  Visit https://awesome-boutique-9152.spree.mx/
+2.  Click the SHOP link at the top of the page
+3.  Click on the image of the Rails Tote Bag (1st product on the 1st row)
+4.  Click on Add To Cart Button
+5.  Click on Continue Shopping Button
+6.  Click on "Spree" under Shop by Brand
+7.  Click on the "Spree Ringer T Shirt" image
+8.  Click on Add To Cart Button
+9.  Verify that the total is $35.98
+10. Click on the amount (Recorded by Selenium Builder)
+11.  Click on Continue Shopping
+12.  Click on Ruby on Rails Tote Bag Image
+13.  Click on Featured under look for similar items
+14.  Click on Price Range 15 to 18 dollars
+15.  Click on Search button
+16.  Click on Cart 
+17.  Verify that the total is $35.98
